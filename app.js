@@ -14,18 +14,18 @@ app.get('/produtos', (req, res) => {
     res.send("Listando produtos: ");
 })
 
-app.get('/produtos/id', (req, res) => {
-    res.send("procurando produto: ");
+app.get('/produtos/:id', (req, res) => {
+    res.send("Buscar pelo id: ");
 })
 
 app.post('/produtos', (req, res) => {
-    res.send("Criando produto: ");
+    res.send("Cadastrar produto: ");
 })
 
-app.put('/produtos/id', (req, res) => {
-    res.send("Editando produto: ");
+app.put('/produtos/:id', (req, res) => {
+    res.send("Atualizar o produto com id: ");
 })
 
-app.delete('/produtos/id', (req, res) => {
-    res.send("Deletando produto: ");
+app.delete('/produtos/:id', (req, res) => {
+    res.send("Deletando o produto com id: ");
 })
