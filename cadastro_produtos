@@ -21,7 +21,7 @@ function inserir(produto) {
 
 function buscarPorId(id) {
     for(let produto of listaProdutos){ 
-        if(produto.id === id){
+        if(produto.id == id){
             return produto;
         }
     }
@@ -33,14 +33,14 @@ function buscarPorId(id) {
 
 function atualizar(id, produtoAlterar) {
     if(!produtoAlterar || !produtoAlterar.nome || !produtoAlterar.preco){
-        throw new Error({
+        throw ({
             numero: 400,
             msg: "Erro: Os parametros de produto estao invalidos"
         });       
     }
     for(let indice in listaProdutos){
-        if(listaProdutos[indice].id === id) {
-            produtoAlterar.id = id;
+        if(listaProdutos[indice].id == id) {
+            produtoAlterar.id = parseInt(id);
             listaProdutos[indice] = produtoAlterar;
             return listaProdutos[indice];
         }
@@ -53,7 +53,7 @@ function atualizar(id, produtoAlterar) {
 
 function deletar(id) {
     for(let indice in listaProdutos){
-        if(listaProdutos[indice].id === id) {
+        if(listaProdutos[indice].id == id) {
             const produtoDeletado = listaProdutos.splice(indice,1);
             return produtoDeletado[0];
         }
