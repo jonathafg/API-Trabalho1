@@ -24,8 +24,12 @@ app.get('/produtos', (req, res) => {
 app.get('/produtos/:id', (req, res) => {
     //res.send("Buscar pelo id: ");
     const id = req.params.id;
-    console.log("Get ID: ", id);
-    res.json(produtos[0]);
+    try {
+        const produto = cadastroProdutos.buscarPorId(id);
+        res.json(produtos);
+    } catch (err) {
+        res.status(err.numero).json(err);
+    }
 })
 
 app.post('/produtos', (req, res) => {
@@ -44,13 +48,24 @@ app.post('/produtos', (req, res) => {
 app.put('/produtos/:id', (req, res) => {
     //res.send("Atualizar o produto com id: ");
     const id = req.params.id;
-    console.log("UPDATE: ",id)
-    res.json(produtos[0]);
+    const produto = req.body;
+    try {
+        const produtoAtualizado = cadastroProdutos.atualizar(id,produto);
+        res.json(produtoAtualizado);
+    }
+    catch (err) {
+        res.status(err.numero).json(err);
+    }
 })
 
 app.delete('/produtos/:id', (req, res) => {
     //res.send("Deletando o produto com id: ");
     const id = req.params.id;
-    console.log("DELETE: ",id)
-    res.json(produtos[0]);
+    try {
+        const produtoDeletado = cadastroProdutos.deletar(id);
+        res.json(produtoDeletado);
+    }
+    catch (err) {
+        res.status(err.numero).json(err);
+    }
 })
