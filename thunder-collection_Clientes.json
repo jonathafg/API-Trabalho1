@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Clientes",
+    "dateExported": "2023-06-08T15:39:37.714Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "939f5d92-b3d8-4acd-8e47-e3d47569d8e4",
+            "colId": "f14acfe8-ab84-4714-b05b-e6e4c3221e63",
+            "containerId": "",
+            "name": "listar",
+            "url": "localhost:3000/clientes",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-06-08T14:55:15.527Z",
+            "modified": "2023-06-08T14:55:24.880Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "77320e94-0ff0-4e0c-9736-90dff728411b",
+            "colId": "f14acfe8-ab84-4714-b05b-e6e4c3221e63",
+            "containerId": "",
+            "name": "inserir",
+            "url": "localhost:3000/clientes",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-06-08T14:55:38.376Z",
+            "modified": "2023-06-08T14:56:32.159Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Matheus\",\n  \"matricula\": \"210714\",\n  \"telefone\": \"34923452\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "6fc2e565-b6ba-4af7-b06a-c41e0655fb10",
+            "colId": "f14acfe8-ab84-4714-b05b-e6e4c3221e63",
+            "containerId": "",
+            "name": "buscaPorID",
+            "url": "localhost:3000/clientes/1",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-06-08T14:56:44.787Z",
+            "modified": "2023-06-08T14:56:52.777Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "0089bd6a-9125-4c49-b9e6-9e774691e870",
+            "colId": "f14acfe8-ab84-4714-b05b-e6e4c3221e63",
+            "containerId": "",
+            "name": "atualizar",
+            "url": "localhost:3000/clientes/1",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-06-08T14:57:07.647Z",
+            "modified": "2023-06-08T14:57:38.504Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Alberto\",\n  \"matricula\": \"210728\",\n  \"telefone\": \"33942824\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2a9db464-643d-444a-b2bb-d708ccf68a98",
+            "colId": "f14acfe8-ab84-4714-b05b-e6e4c3221e63",
+            "containerId": "",
+            "name": "deletar",
+            "url": "localhost:3000/clientes/1",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-06-08T14:57:48.258Z",
+            "modified": "2023-06-08T14:57:53.614Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

@@ -1,14 +1,17 @@
 const express = require('express');
-const produtoRota = require('.rotas/produto_rotas')
+
+const livroRota = require('./rotas/livro_rotas');
+const autorRota = require('./rotas/autor_rotas');
+const clienteRota = require('./rotas/cliente_rotas');
 
 const app = express();
 const port = 3000;
 
-// const produtos = [{id:1, nome: "Produto 1", preco: 30}];
-
 app.use(express.json());
 
-app.use('/produtos', produtoRota)
+app.use('/livros', livroRota);
+app.use('/autores', autorRota);
+app.use('/clientes', clienteRota);
 
 app.listen(port, () => {
     console.log(`Servidor Iniciado na porta ${port}`);

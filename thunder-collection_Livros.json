@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Livros",
+    "dateExported": "2023-06-08T15:39:19.021Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "5807c740-8485-413d-9778-ec117eaea571",
+            "colId": "fd843ad9-824b-4b5d-8a58-56acbbc686ce",
+            "containerId": "",
+            "name": "listar",
+            "url": "localhost:3000/livros",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-06-08T14:43:01.427Z",
+            "modified": "2023-06-08T14:47:28.658Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c8d8681e-bc62-463e-a98d-c2590792cb31",
+            "colId": "fd843ad9-824b-4b5d-8a58-56acbbc686ce",
+            "containerId": "",
+            "name": "inserir",
+            "url": "localhost:3000/livros",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-06-08T14:43:45.228Z",
+            "modified": "2023-06-08T14:47:25.445Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"livro1\",\n  \"isbn\": \"99922384\",\n  \"autor\": \"Joao\",\n  \"editora\": \"Magia\",\n  \"anoPublicacao\": \"2002\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "79121de4-dc6b-4346-aa12-b2a6a5b587a0",
+            "colId": "fd843ad9-824b-4b5d-8a58-56acbbc686ce",
+            "containerId": "",
+            "name": "buscarPorID",
+            "url": "localhost:3000/livros/1",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-06-08T14:47:57.287Z",
+            "modified": "2023-06-08T14:49:41.786Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "c7f33e82-f541-4d40-8b5b-2e5439d51070",
+            "colId": "fd843ad9-824b-4b5d-8a58-56acbbc686ce",
+            "containerId": "",
+            "name": "atualizar",
+            "url": "localhost:3000/livros/1",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2023-06-08T14:49:07.919Z",
+            "modified": "2023-06-08T14:50:52.398Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"livro4\",\n  \"isbn\": \"11122384\",\n  \"autor\": \"Pablo\",\n  \"editora\": \"Magia\",\n  \"anoPublicacao\": \"2007\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4a9754a2-94bc-4c75-9fe6-fb6da819b0eb",
+            "colId": "fd843ad9-824b-4b5d-8a58-56acbbc686ce",
+            "containerId": "",
+            "name": "deletar",
+            "url": "localhost:3000/livros/1",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2023-06-08T14:49:13.040Z",
+            "modified": "2023-06-08T14:50:56.026Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

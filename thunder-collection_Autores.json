@@ -1,0 +1,89 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Autores",
+    "dateExported": "2023-06-08T15:39:32.878Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "f5feb7b5-7db9-4df7-9675-7ffd27f885d4",
+            "colId": "c17c7d00-645a-4774-b0de-7497c2f9ad10",
+            "containerId": "",
+            "name": "listar",
+            "url": "localhost:3000/autores",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-06-08T14:51:42.082Z",
+            "modified": "2023-06-08T14:51:52.683Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "6980a5a2-4653-4045-a45e-19bf072a1c5e",
+            "colId": "c17c7d00-645a-4774-b0de-7497c2f9ad10",
+            "containerId": "",
+            "name": "inserir",
+            "url": "localhost:3000/autores",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-06-08T14:52:04.694Z",
+            "modified": "2023-06-08T14:53:13.725Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Carlos\",\n  \"paisOrigem\": \"Brasil\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "08b8ad88-019e-4510-9123-3425ef4dc5a3",
+            "colId": "c17c7d00-645a-4774-b0de-7497c2f9ad10",
+            "containerId": "",
+            "name": "buscarPorID",
+            "url": "localhost:3000/autores/1",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2023-06-08T14:53:28.923Z",
+            "modified": "2023-06-08T14:53:36.433Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "11138b75-da58-4f02-8dc8-8c76cf1c305c",
+            "colId": "c17c7d00-645a-4774-b0de-7497c2f9ad10",
+            "containerId": "",
+            "name": "atualizar",
+            "url": "localhost:3000/autores/1",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-06-08T14:54:16.289Z",
+            "modified": "2023-06-08T14:54:37.069Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nome\": \"Joao\",\n  \"paisOrigem\": \"Argentina\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "e19b1199-a35e-4acd-b92c-85f9042e471b",
+            "colId": "c17c7d00-645a-4774-b0de-7497c2f9ad10",
+            "containerId": "",
+            "name": "deletar",
+            "url": "localhost:3000/livros/1",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2023-06-08T14:54:48.302Z",
+            "modified": "2023-06-08T14:54:53.111Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
