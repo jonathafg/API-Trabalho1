@@ -39,28 +39,51 @@ async function inserir(req, res) {
     }
 }
 
-function atualizar(req,res) {
+async function atualizar(req,res) {
     const id = req.params.id;
     const autor = req.body;
-    try{
-        const autorAtualizado = cadastroAutores.atualizar(id,autor);
-        res.json(autorAtualizado);
-    }
-    catch (err) {
-        res.status(err.numero).json(err);
-    }
 
+    if(autor && autor.nome && autor.paisOrigem)
+    {
+        const autorAlterado = 
+            await repositoryAutores.atualizar(id,autor);
+        if(autorAlterado){
+            res.json(autorAlterado);
+        }
+        else {
+            res.status(404).json(
+                {
+                    numero: 404,
+                    msg: "Erro: Autor nao encontrado."
+                }
+            );
+        }        
+    }
+    else {
+        res.status(400).json(
+            {
+                numero: 400,
+                msg: "Erro: Os parametros de autor estao invalidos"
+            }
+        );
+    }
 }
 
-function deletar(req,res) {
+async function deletar(req,res) {
     const id = req.params.id;
-    try{
-        const autorDeletado = cadastroAutores.deletar(id);
+    const autorDeletado = 
+        await repositoryAutores.deletar(id);
+    if(autorDeletado){
         res.json(autorDeletado);
     }
-    catch (err) {
-        res.status(err.numero).json(err);
-    }
+    else {
+        res.status(404).json(
+            {
+                numero: 404,
+                msg: "Erro: Autor nao encontrado."
+            }
+        );
+    }       
 }
 
 module.exports = {

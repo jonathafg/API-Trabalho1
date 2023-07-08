@@ -38,28 +38,51 @@ async function inserir(req, res) {
     }
 }
 
-function atualizar(req,res) {
+async function atualizar(req,res) {
     const id = req.params.id;
     const cliente = req.body;
-    try{
-        const clienteAtualizado = cadastroClientes.atualizar(id,cliente);
-        res.json(clienteAtualizado);
-    }
-    catch (err) {
-        res.status(err.numero).json(err);
-    }
 
+    if(cliente && cliente.nome && cliente.matricula && cliente.telefone)
+    {
+        const clienteAlterado = 
+            await repositoryClientes.atualizar(id,cliente);
+        if(clienteAlterado){
+            res.json(clienteAlterado);
+        }
+        else {
+            res.status(404).json(
+                {
+                    numero: 404,
+                    msg: "Erro: Cliente nao encontrado."
+                }
+            );
+        }        
+    }
+    else {
+        res.status(400).json(
+            {
+                numero: 400,
+                msg: "Erro: Os parametros de cliente estao invalidos"
+            }
+        );
+    }
 }
 
-function deletar(req,res) {
+async function deletar(req,res) {
     const id = req.params.id;
-    try{
-        const clienteDeletado = cadastroClientes.deletar(id);
+    const clienteDeletado = 
+        await repositoryClientes.deletar(id);
+    if(clienteDeletado){
         res.json(clienteDeletado);
     }
-    catch (err) {
-        res.status(err.numero).json(err);
-    }
+    else {
+        res.status(404).json(
+            {
+                numero: 404,
+                msg: "Erro: Cliente nao encontrado."
+            }
+        );
+    }       
 }
 
 module.exports = {

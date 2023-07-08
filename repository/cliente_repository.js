@@ -9,7 +9,7 @@ conexao = {
 };
 
 async function listar() {
-    const cliente = new Client(conexao)
+    const cliente = new Client(conexao);
     await cliente.connect();
     const res = await cliente.query('SELECT * FROM clientes')
     const listaClientes = res.rows;
@@ -31,11 +31,11 @@ async function inserir(cliente){
     const sql = 'INSERT INTO clientes (nome, matricula, telefone) VALUES ($1, $2, $3) RETURNING *';
     const values = [cliente.nome, cliente.matricula, cliente.telefone];
 
-    const cliente = new Client(conexao);
-    await cliente.connect();
-    const res = await cliente.query(sql,values);
+    const Cliente = new Client(conexao);
+    await Cliente.connect();
+    const res = await Cliente.query(sql,values);
     const clienteInserido = res.rows[0];
-    await cliente.end();
+    await Cliente.end();
     return clienteInserido
 }
 
@@ -53,7 +53,7 @@ async function atualizar(id, clienteAlterar){
 }
 
 async function deletar(id){
-    const sql = 'DELETE FROM clientes WHERE clientesid = $1 RETURNING *';
+    const sql = 'DELETE FROM clientes WHERE id = $1 RETURNING *';
     const values = [id];
 
     const cliente = new Client(conexao);

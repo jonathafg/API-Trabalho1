@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Livros",
-    "dateExported": "2023-06-08T15:39:19.021Z",
+    "dateExported": "2023-07-08T03:49:22.583Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -28,12 +28,12 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2023-06-08T14:43:45.228Z",
-            "modified": "2023-06-08T14:47:25.445Z",
+            "modified": "2023-07-08T03:47:11.846Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nome\": \"livro1\",\n  \"isbn\": \"99922384\",\n  \"autor\": \"Joao\",\n  \"editora\": \"Magia\",\n  \"anoPublicacao\": \"2002\"\n}",
+                "raw": "{\n  \"nome\": \"livro2\",\n  \"isbn\": \"99922384\",\n  \"autores\": \"Joao\",\n  \"editora\": \"Magia\",\n  \"anoPublicacao\": \"2002\"\n}",
                 "form": []
             },
             "tests": []
@@ -61,12 +61,12 @@
             "method": "PUT",
             "sortNum": 50000,
             "created": "2023-06-08T14:49:07.919Z",
-            "modified": "2023-06-08T14:50:52.398Z",
+            "modified": "2023-07-08T03:47:25.089Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"nome\": \"livro4\",\n  \"isbn\": \"11122384\",\n  \"autor\": \"Pablo\",\n  \"editora\": \"Magia\",\n  \"anoPublicacao\": \"2007\"\n}",
+                "raw": "{\n  \"nome\": \"livro10\",\n  \"isbn\": \"11122384\",\n  \"autores\": \"Pablo\",\n  \"editora\": \"Magia\",\n  \"anoPublicacao\": \"2007\"\n}",
                 "form": []
             },
             "tests": []

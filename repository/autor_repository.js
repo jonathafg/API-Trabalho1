@@ -53,7 +53,7 @@ async function atualizar(id, autorAlterar){
 }
 
 async function deletar(id){
-    const sql = 'DELETE FROM autores WHERE autoresid = $1 RETURNING *';
+    const sql = 'DELETE FROM autores WHERE id = $1 RETURNING *';
     const values = [id];
 
     const cliente = new Client(conexao);

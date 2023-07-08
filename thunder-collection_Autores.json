@@ -1,7 +1,7 @@
 {
     "client": "Thunder Client",
     "collectionName": "Autores",
-    "dateExported": "2023-06-08T15:39:32.878Z",
+    "dateExported": "2023-07-08T03:49:31.823Z",
     "version": "1.1",
     "folders": [],
     "requests": [
@@ -76,11 +76,11 @@
             "colId": "c17c7d00-645a-4774-b0de-7497c2f9ad10",
             "containerId": "",
             "name": "deletar",
-            "url": "localhost:3000/livros/1",
+            "url": "localhost:3000/autores/1",
             "method": "DELETE",
             "sortNum": 50000,
             "created": "2023-06-08T14:54:48.302Z",
-            "modified": "2023-06-08T14:54:53.111Z",
+            "modified": "2023-07-08T03:48:26.062Z",
             "headers": [],
             "params": [],
             "tests": []
